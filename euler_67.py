@@ -17,7 +17,8 @@ def f():
     """Finds maximum path sum."""
     for n in range(1, len(lists)):
         for k in range(len(lists[n])):
-           lists[n][k] = int(lists[n][k]) + int(max(lists[n-1][k], lists[n-1][k+1]))
+           lists[n][k] = int(lists[n][k]) + int(max(lists[n-1][k],
+                                                lists[n-1][k+1]))
     return lists[-1]
 
 print f()       
